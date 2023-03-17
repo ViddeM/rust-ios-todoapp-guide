@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "todo-notes",
+    "slug": "todo-notes",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "todo-notes"
+}
