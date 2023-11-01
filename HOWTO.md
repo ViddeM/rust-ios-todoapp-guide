@@ -386,3 +386,17 @@ The number will now start at `10` and each time we press the button it should do
 
 ## More complex types
 So we're now able to pass simple values back and forth between our javascript and rust code.
+
+However, numbers are very simple values. Not requiring any specific allocation or similar, however, how would we pass an object between javascript and rust?
+
+We have a few different options, we can either allocate the object in objective-c and pass a reference to rust so it can fill it in.
+Alternatively we can allocate the object in Rust and pass a reference to objective-c. 
+They are both useful in different scenarios, the first is generally simpler but not always possible as we might not always know the size of the object to allocate in objective-c.
+
+## What else?
+Things that are likely to be required for a real-life App that are not covered in this guide:
+ - Interacting with the device systems for things like:
+   - Using the device sensors.
+   - Storing data on the device.
+   - Using built-in OS features such as FaceID or similar.
+- Publishing / building the App for an actual device and not just the simulator
